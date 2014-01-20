@@ -1,0 +1,1 @@
+Это форк от  [Memcached Providers project](http://github.com/friism/Memcached-Providers/).
