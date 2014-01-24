@@ -1,16 +1,18 @@
 Это форк от  [Memcached Providers project](http://github.com/friism/Memcached-Providers/).
 
-### Open Web.config file and add the following section to configSections tag
+---
 
-```
+- Open Web.config file and add the following section to configSections tag
+
+```xml
 <sectionGroup name="enyim.com">
 	<section name="memcached" type="Enyim.Caching.Configuration.MemcachedClientSection, Enyim.Caching"/>
 </sectionGroup>
 ```
 
-### Add the following section to configure Enyim’s client to point to Memcached servers
+- Add the following section to configure Enyim’s client to point to Memcached servers
 
-```
+```xml
 <enyim.com>
     <memcached>
         <servers>
@@ -22,11 +24,10 @@
 </enyim.com>
 ```
 
-### Add the following section to configure Memcached Session State Provider. 
+- Add the following section to configure Memcached Session State Provider. 
 
-```
-<sessionState cookieless="false" regenerateExpiredSessionId="true" mode="Custom"
-customProvider="MemcachedSessionProvider">
+```xml
+<sessionState cookieless="false" regenerateExpiredSessionId="true" mode="Custom" customProvider="MemcachedSessionProvider">
     <providers>
         <add name="MemcachedSessionProvider"
         type="MemcachedProviders.Session.SessionStateProvider,MemcachedProviders"
